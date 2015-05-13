@@ -1,5 +1,5 @@
 # maskedPlaceholder
-Placeholder mask for old browsers. <br/>
+Placeholder mask for old browsers. include `ie5+` <br/>
 Pure js.
 
 
