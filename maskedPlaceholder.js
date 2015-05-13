@@ -3,11 +3,13 @@ var placeholderMask = document.getElementsByClassName("placeholder-mask");
 
 function maskedPlaceholder(currentInput, dataPlaceholder) {
 	currentInput.addEventListener('focus', function() {
-		currentInput.value = "";
+		if (currentInput.value == dataPlaceholder) { 
+			currentInput.value = "";
+	  	}
 	});
 
 	currentInput.addEventListener('blur', function() {
-			if (currentInput.value == "") { 
+		if (currentInput.value == "") { 
 			currentInput.value = dataPlaceholder;
 	  	}
 	});
