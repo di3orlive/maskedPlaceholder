@@ -1,5 +1,5 @@
 # maskedPlaceholder
-Placeholder mask for old browsers.
+Placeholder mask for old browsers. <br/>
 Pure js.
 
 
