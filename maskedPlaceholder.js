@@ -1,18 +1,50 @@
+// ie fix
+if(document.getElementsByClassName == undefined) { 
+   document.getElementsByClassName = function(cl) { 
+      var retnode = []; 
+      var myclass = new RegExp('\\b'+cl+'\\b'); 
+      var elem = this.getElementsByTagName('*'); 
+      for (var i = 0; i < elem.length; i++) { 
+         var classes = elem[i].className; 
+         if (myclass.test(classes)) { 
+            retnode.push(elem[i]); 
+         } 
+      } 
+      return retnode; 
+   } 
+};
+// ie fix
+
+
 var placeholderMask = document.getElementsByClassName("placeholder-mask");
 
 
 function maskedPlaceholder(currentInput, dataPlaceholder) {
-	currentInput.addEventListener('focus', function() {
-		if (currentInput.value == dataPlaceholder) { 
-			currentInput.value = "";
-	  	}
-	});
+	if (document.addEventListener) {                
+		currentInput.addEventListener('focus', function() {
+			if (currentInput.value == dataPlaceholder) { 
+				currentInput.value = "";
+		  	}
+		});
 
-	currentInput.addEventListener('blur', function() {
-		if (currentInput.value == "") { 
-			currentInput.value = dataPlaceholder;
-	  	}
-	});
+		currentInput.addEventListener('blur', function() {
+			if (currentInput.value == "") { 
+				currentInput.value = dataPlaceholder;
+		  	}
+		});
+	} else if (document.attachEvent) {              
+		currentInput.attachEvent('onfocus', function() {
+			if (currentInput.value == dataPlaceholder) { 
+				currentInput.value = "";
+		  	}
+		});
+
+		currentInput.attachEvent('onblur', function() {
+			if (currentInput.value == "") { 
+				currentInput.value = dataPlaceholder;
+		  	}
+		});
+	}
 };
 
 
