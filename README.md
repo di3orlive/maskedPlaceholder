@@ -3,7 +3,7 @@ Placeholder mask for old browsers
 
 Usage
 -----
-Just add class "placeholder-mask" and data attribute "data-placeholder" to input.
+Just add class `"placeholder-mask"` and data attribute `"data-placeholder"` to input.
 
 Like this:
 -----
