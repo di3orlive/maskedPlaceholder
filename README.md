@@ -6,14 +6,17 @@ Pure js.
 Usage
 -----
 Just add some class `"placeholder-mask"` and data attribute `"data-placeholder"` to input.
-```js
-  maskedPlaceholder("placeholder-mask");
-```
 
 Like this:
 -----
 ```html
   <input type="text" data-placeholder="1111111111" class="placeholder-mask">
+```
+
+initialize:
+-----
+```js
+  maskedPlaceholder("placeholder-mask");
 ```
 
 ![placeholder](http://i61.tinypic.com/2n1i88z.jpg)
