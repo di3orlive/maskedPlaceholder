@@ -5,7 +5,11 @@ Pure js.
 
 Usage
 -----
-Just add some class `"placeholder-mask"` and data attribute `"data-placeholder"` to input.
+To initialize this plugin, just add some class to function:
+```js
+  maskedPlaceholder("placeholder-mask");
+```
+and data attribute `"data-placeholder"` to input.
 
 Like this:
 -----
@@ -14,9 +18,5 @@ Like this:
 ```
 ![placeholder](http://i61.tinypic.com/2n1i88z.jpg)
 
-Initialize:
------
-```js
-  maskedPlaceholder("placeholder-mask");
-```
+
 
